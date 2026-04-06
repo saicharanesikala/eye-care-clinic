@@ -1,0 +1,346 @@
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar" [class.scrolled]="isScrolled()" id="navbar">
+  <div class="nav-container">
+    <a class="nav-logo" href="#home" (click)="scrollTo($event, '#home')">
+      <div class="logo-icon">
+        <img src="logo.webp" alt="Abhilash Netra Vydyasala Logo" class="logo-img">
+      </div>
+      <div class="logo-text">
+        <span class="logo-name">Abhilash Netra</span>
+        <span class="logo-tagline">Vydyasala</span>
+      </div>
+    </a>
+
+    <ul class="nav-links" [class.active]="mobileMenuOpen()">
+      @for (link of navLinks; track link.href) {
+      <li>
+        <a [href]="link.href" [class.active]="activeSection() === link.href.substring(1)"
+          (click)="scrollTo($event, link.href)">
+          {{ link.label }}
+        </a>
+      </li>
+      }
+      <li class="nav-cta-mobile">
+        <a href="tel:+918555016293" class="btn btn-accent btn-sm">
+          <i class="fa-solid fa-phone"></i>
+          Call Now
+        </a>
+      </li>
+    </ul>
+
+    <div class="nav-actions">
+      <a href="tel:+918555016293" class="nav-phone">
+        <i class="fa-solid fa-phone"></i>
+        <span>+91 85550 16293</span>
+      </a>
+      <a href="#contact" class="btn btn-accent btn-sm nav-cta-desktop" (click)="scrollTo($event, '#contact')">
+        Contact Us
+      </a>
+    </div>
+
+    <button class="hamburger" [class.active]="mobileMenuOpen()" (click)="toggleMenu()" aria-label="Toggle menu"
+      id="hamburger-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile overlay -->
+<div class="mobile-overlay" [class.active]="mobileMenuOpen()" (click)="closeMenu()"></div>
+
+<!-- ===== HERO SECTION ===== -->
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <div class="hero-particles">
+      @for (i of [1,2,3,4,5,6]; track i) {
+      <div class="particle" [style.animation-delay]="i * 0.7 + 's'"></div>
+      }
+    </div>
+    <div class="hero-gradient-orb orb-1"></div>
+    <div class="hero-gradient-orb orb-2"></div>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-badge">
+        <i class="fa-solid fa-eye"></i>
+        <span>Trusted Eye Care in Proddatur</span>
+      </div>
+      <h1 class="hero-title">
+        <span class="hero-title-line">Clear Vision,</span>
+        <span class="hero-title-line hero-title-accent">Brighter Life</span>
+      </h1>
+      <p class="hero-description">
+        At Abhilash Netra Vydyasala, we are dedicated to preserving and restoring
+        your vision with compassionate, expert eye care using the latest technology.
+      </p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn btn-accent btn-lg" (click)="scrollTo($event, '#contact')">
+          <i class="fa-solid fa-phone"></i>
+          Get In Touch
+        </a>
+        <a href="#about" class="btn btn-outline btn-lg" (click)="scrollTo($event, '#about')">
+          Learn More
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+      <div class="hero-trust-badges">
+        <div class="trust-badge">
+          <i class="fa-solid fa-shield-check"></i>
+          <span>NABH Accredited</span>
+        </div>
+        <div class="trust-badge">
+          <i class="fa-solid fa-certificate"></i>
+          <span>ISO 9001:2015</span>
+        </div>
+        <div class="trust-badge">
+          <i class="fa-solid fa-award"></i>
+          <span>Award Winning</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-doctor-card">
+        <img src="t2.png" alt="Doctor at Abhilash Netra Vydyasala" class="hero-doctor-img">
+        <div class="hero-doctor-badge">
+          <i class="fa-solid fa-star"></i>
+          <span>Expert Eye Care</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-scroll-indicator">
+    <div class="scroll-mouse">
+      <div class="scroll-wheel"></div>
+    </div>
+    <span>Scroll to explore</span>
+  </div>
+</section>
+
+<!-- ===== ABOUT SECTION ===== -->
+<section class="about-section" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-content">
+        <div class="section-label">
+          <span class="label-line"></span>
+          <span class="label-text">About Us</span>
+        </div>
+        <h2 class="section-title">A Legacy of Excellence in <span class="text-accent">Eye Care</span></h2>
+        <p class="about-lead">
+          Founded with a mission to provide world-class ophthalmological care,
+          Abhilash Netra Vydyasala has been serving the community of Proddatur
+          with compassion and clinical excellence.
+        </p>
+        <p class="about-text">
+          Our state-of-the-art facility is equipped with modern diagnostic and surgical
+          technology. We combine advanced equipment with a patient-first philosophy
+          to deliver exceptional outcomes for every patient we serve.
+        </p>
+        <div class="about-features">
+          <div class="about-feature">
+            <div class="feature-icon">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+            <div>
+              <h4>Advanced Technology</h4>
+              <p>Latest diagnostic equipment and surgical instruments</p>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="feature-icon">
+              <i class="fa-solid fa-hand-holding-heart"></i>
+            </div>
+            <div>
+              <h4>Patient-First Care</h4>
+              <p>Personalized treatment plans with compassion</p>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="feature-icon">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div>
+              <h4>Our Location</h4>
+              <p>
+                3/1350, Gandhi Rd, Holmus Pet, Proddatur, Andhra Pradesh 516361<br>
+                <a href="https://maps.google.com/?q=Abhilash+Netra+Vydyasala+3/1350+Gandhi+Rd+Holmus+Pet+Proddatur+Andhra+Pradesh+516361"
+                  target="_blank" class="directions-link">
+                  <i class="fa-solid fa-map-location-dot"></i> Get Directions
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-visual">
+        <div class="about-images-stack">
+          <div class="about-main-image">
+            <img src="t5.png" alt="Abhilash Netra Vydyasala Hospital" class="about-img">
+          </div>
+          <div class="about-address-card">
+            <img src="t6.png" alt="Hospital Location" class="about-address-img">
+            <div class="address-overlay">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Proddatur, Andhra Pradesh</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TEAM SECTION ===== -->
+<section class="team-section" id="team">
+  <div class="container">
+    <div class="section-header text-center">
+      <div class="section-label centered">
+        <span class="label-line"></span>
+        <span class="label-text">Our Doctors</span>
+        <span class="label-line"></span>
+      </div>
+      <h2 class="section-title">Meet Our <span class="text-accent">Expert Team</span></h2>
+      <p class="section-subtitle">
+        Our dedicated team of ophthalmologists brings expertise and genuine
+        passion for preserving and restoring vision.
+      </p>
+    </div>
+
+    <div class="team-grid">
+      @for (member of teamMembers; track member.name; let i = $index) {
+      <div class="team-card" [style.--delay]="(i * 0.15) + 's'">
+        <div class="team-image-wrapper">
+          <img [src]="member.image" [alt]="member.name" class="team-photo">
+          <div class="team-image-overlay">
+            <div class="team-overlay-text">
+              <i class="fa-solid fa-stethoscope"></i>
+              {{ member.specialization }}
+            </div>
+          </div>
+        </div>
+        <div class="team-info">
+          <h3 class="team-name">{{ member.name }}</h3>
+          <span class="team-title">{{ member.title }}</span>
+          <p class="team-bio">{{ member.bio }}</p>
+          <div class="team-meta">
+            <span class="team-experience">
+              <i class="fa-solid fa-clock"></i>
+              {{ member.experience }} Experience
+            </span>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT SECTION ===== -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="contact-header text-center">
+      <div class="section-label centered">
+        <span class="label-line"></span>
+        <span class="label-text">Contact Us</span>
+        <span class="label-line"></span>
+      </div>
+      <h2 class="section-title">Get In <span class="text-accent">Touch</span></h2>
+      <p class="section-subtitle">
+        Reach out to us and our friendly staff will assist you promptly.
+      </p>
+    </div>
+    <div class="contact-cards">
+      <div class="contact-card" id="contact-phone-card">
+        <div class="contact-card-icon">
+          <i class="fa-solid fa-phone"></i>
+        </div>
+        <h3>Call Us</h3>
+        <a href="tel:+918555016293" class="contact-link">+91 85550 16293</a>
+      </div>
+      <div class="contact-card" id="contact-email-card">
+        <div class="contact-card-icon">
+          <i class="fa-solid fa-envelope"></i>
+        </div>
+        <h3>Email Us</h3>
+        <a href="mailto:saicharanesikala4415@gmail.com" class="contact-link">saicharanesikala4415&#64;gmail.com</a>
+      </div>
+      <div class="contact-card" id="contact-location-card">
+        <div class="contact-card-icon">
+          <i class="fa-solid fa-location-dot"></i>
+        </div>
+        <h3>Visit Us</h3>
+        <a href="https://maps.google.com/?q=Abhilash+Netra+Vydyasala+3/1350+Gandhi+Rd+Holmus+Pet+Proddatur+Andhra+Pradesh+516361"
+          target="_blank" class="contact-link">
+          3/1350, Gandhi Rd, Holmus Pet,<br>Proddatur, AP 516361
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a class="footer-logo" href="#home" (click)="scrollTo($event, '#home')">
+          <div class="footer-logo-icon">
+            <img src="logo.webp" alt="Logo" class="footer-logo-img">
+          </div>
+          <div class="logo-text">
+            <span class="logo-name">Abhilash Netra</span>
+            <span class="logo-tagline">Vydyasala</span>
+          </div>
+        </a>
+        <p class="footer-description">
+          Dedicated to providing the finest eye care with compassion and expertise
+          in Proddatur, Andhra Pradesh.
+        </p>
+      </div>
+
+      <div class="footer-links-group">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home" (click)="scrollTo($event, '#home')">Home</a></li>
+          <li><a href="#about" (click)="scrollTo($event, '#about')">About Us</a></li>
+          <li><a href="#team" (click)="scrollTo($event, '#team')">Our Doctors</a></li>
+          <li><a href="#contact" (click)="scrollTo($event, '#contact')">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-group">
+        <h4>Contact Info</h4>
+        <ul class="footer-contact">
+          <li>
+            <i class="fa-solid fa-location-dot"></i>
+            <span>3/1350, Gandhi Rd, Holmus Pet,<br>Proddatur, AP 516361</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-phone"></i>
+            <span>+91 85550 16293</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-envelope"></i>
+            <span>saicharanesikala4415&#64;gmail.com</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Abhilash Netra Vydyasala. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to Top -->
+<a href="#home" class="back-to-top" [class.visible]="isScrolled()" (click)="scrollTo($event, '#home')" id="back-to-top"
+  aria-label="Back to top">
+  <i class="fa-solid fa-chevron-up"></i>
+</a>
