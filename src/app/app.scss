@@ -551,8 +551,9 @@
   animation: fadeInUp 1s ease-out 0.3s both;
 
   @include responsive(tablet) {
-    display: none;
-  }
+  display: flex;
+  justify-content: center;
+}
 }
 
 .hero-doctor-card {
