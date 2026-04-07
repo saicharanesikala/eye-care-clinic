@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Our Doctors | Abhilash Netra Vydyasala</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Newsreader for Headlines, Inter for Body/Labels -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#0F172A",
+                        "accent": "#0E7490", // cyan-700
+                        "surface": "#F8FAFC",
+                        "glass-bg": "rgba(255, 255, 255, 0.7)",
+                        "glass-border": "rgba(255, 255, 255, 0.4)"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Newsreader", "serif"],
+                        "body": ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .serif-display { font-family: 'Newsreader', serif; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(15, 23, 42, 0.05);
+        }
+        .glass-dark-card {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at top right, rgba(14, 116, 144, 0.05), transparent 40%),
+                        radial-gradient(circle at bottom left, rgba(14, 116, 144, 0.03), transparent 30%);
+        }
+    </style>
+</head>
+<body class="bg-surface text-slate-900 font-body antialiased selection:bg-cyan-100">
+<!-- TopNavBar (Shared Component: COMPONENTS_10) -->
+<header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-white/20 shadow-sm">
+<nav class="flex justify-between items-center px-8 py-4 max-w-full mx-auto">
+<div class="text-xl font-bold tracking-tighter font-serif text-slate-900">
+            Abhilash Netra Vydyasala
+        </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 hover:text-cyan-600 transition-colors font-medium tracking-tight" href="#">Home</a>
+<a class="text-slate-600 hover:text-cyan-600 transition-colors font-medium tracking-tight" href="#">About</a>
+<a class="text-cyan-600 font-semibold border-b-2 border-cyan-600 tracking-tight" href="#">Doctors</a>
+<a class="text-slate-600 hover:text-cyan-600 transition-colors font-medium tracking-tight" href="#">Services</a>
+<a class="text-slate-600 hover:text-cyan-600 transition-colors font-medium tracking-tight" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-6">
+<span class="hidden lg:block text-slate-600 font-medium text-sm tracking-tight">+1-800-EYE-CARE</span>
+<button class="bg-cyan-700 text-white px-6 py-2.5 rounded-lg text-sm font-semibold hover:opacity-80 transition-all duration-300 scale-95 active:scale-90">
+                Book Appointment
+            </button>
+</div>
+</nav>
+</header>
+<main class="pt-32 pb-24 hero-gradient">
+<!-- Hero Section -->
+<section class="max-w-7xl mx-auto px-8 mb-24 text-center">
+<span class="inline-block px-4 py-1.5 rounded-full bg-cyan-50 text-cyan-700 text-[10px] uppercase font-bold tracking-[0.2em] mb-6 border border-cyan-100">
+            Precision Ethereal Care
+        </span>
+<h1 class="serif-display text-5xl md:text-7xl text-slate-900 leading-[1.1] mb-8">
+            Meet Our Expert Team
+        </h1>
+<p class="max-w-2xl mx-auto text-slate-500 text-lg leading-relaxed font-light">
+            Dedicated to restoring and preserving your vision with a legacy of surgical excellence and compassionate eye care.
+        </p>
+</section>
+<!-- Doctors Profiles -->
+<section class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Dr. Sakam Guru Abhilash (Main Profile) -->
+<div class="lg:col-span-7 group">
+<div class="glass-card rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-xl">
+<div class="aspect-[16/10] overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Professional portrait of Dr. Sakam Guru Abhilash" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCP4PW_17WPQCZpGDicKfyi4dL8ncyqfgZGmLh5hmRC8iEsZAzpma-tXqbw-vFqBq0FXzOUpUwlxn9qLRLW9TxjYnTJQpRlD8Cfhn6GShd_NcTrZH1RJ6J905SAd2mdIu5FlfJbQ0fbsm5fYujetOxLjsUXv5_F-PBdcOmxwucQgFSFrF0CP458JzGLbrS9DeGpzO7_9TCVYw5JDPR-Yq4BOOFJTTT3G-RPtFsdJxKDkxU4xYh1Cw0mJEDgL7eaMZnScjsgTxNCDYg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-white/40 to-transparent"></div>
+<div class="absolute top-6 left-6 glass-dark-card px-4 py-2 rounded-lg">
+<span class="text-white text-[10px] uppercase font-bold tracking-[0.2em]">Chief Ophthalmologist</span>
+</div>
+</div>
+<div class="p-10 md:p-14">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+<div>
+<h2 class="serif-display text-4xl text-slate-900 mb-2">Dr. Sakam Guru Abhilash</h2>
+<p class="text-cyan-700 font-medium text-lg italic opacity-80">MBBS, MS (Ophthalmology), Fellow in Phaco &amp; Refractive Surgery</p>
+</div>
+<div class="flex gap-3">
+<div class="h-12 w-12 rounded-full border border-slate-200 flex items-center justify-center text-slate-400 hover:text-cyan-600 transition-colors">
+<span class="material-symbols-outlined" data-icon="school">school</span>
+</div>
+<div class="h-12 w-12 rounded-full border border-slate-200 flex items-center justify-center text-slate-400 hover:text-cyan-600 transition-colors">
+<span class="material-symbols-outlined" data-icon="award_star">award_star</span>
+</div>
+</div>
+</div>
+<p class="text-slate-600 leading-relaxed text-lg mb-10 font-light">
+                            With over two decades of clinical mastery, Dr. Abhilash leads our surgical team with a focus on advanced micro-incision cataract surgery and refractive corrections. His vision for the hospital is centered on bringing international standards of eye care to our local community.
+                        </p>
+<div class="flex flex-wrap gap-2">
+<span class="px-5 py-2 glass-card rounded-full text-xs font-semibold text-slate-500 border-none">Phaco Surgery</span>
+<span class="px-5 py-2 glass-card rounded-full text-xs font-semibold text-slate-500 border-none">LASIK Expertise</span>
+<span class="px-5 py-2 glass-card rounded-full text-xs font-semibold text-slate-500 border-none">Medical Retina</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Supporting Profile & Philosophy -->
+<div class="lg:col-span-5 space-y-8">
+<!-- Dr. Sakam Guru Murthy -->
+<div class="glass-card rounded-2xl overflow-hidden group">
+<div class="aspect-[4/3] overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Portrait of Dr. Sakam Guru Murthy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVE17AKV2ANlmcJJbmuNldD2HH2q8GmRBjQF1X3AOguUdxuum9B1LdNO2s-xTIT0HTTdi4ZkO2Wjz4_5h_JvSKtqVW0tLPgws8NV9GN5juc6IGv4uAFvwXmsVP-1LhnaHMxlOlFci4ianfc3VuozzSPGAmcYUwZKvK2Fb3LLW6pMG7Jyx_ouXxH_f2mlzwVrqYGWMmQIZnZFhiRvz2eb62Aggz8Klex16BLE9FVpGEWahAP7z8tnV17FypMF-WB3W0jYy-AI4_NwY"/>
+</div>
+<div class="p-8">
+<span class="text-cyan-700 text-[10px] uppercase font-bold tracking-[0.2em] mb-4 block">Senior Eye Specialist</span>
+<h3 class="serif-display text-3xl text-slate-900 mb-4">Dr. Sakam Guru Murthy</h3>
+<p class="text-slate-600 leading-relaxed font-light mb-8">
+                            A veteran in comprehensive ophthalmology, Dr. Murthy specializes in glaucoma management and pediatric eye care. His approach blends traditional clinical wisdom with modern diagnostic precision.
+                        </p>
+<div class="pt-6 border-t border-slate-100 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-cyan-600 text-lg" data-icon="verified">verified</span>
+<span class="text-sm font-semibold text-slate-900">30+ Years Experience</span>
+</div>
+<button class="text-cyan-700 font-bold text-sm flex items-center gap-2 group/btn transition-all hover:translate-x-1">
+                                Full Profile 
+                                <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Philosophy -->
+<div class="glass-dark-card rounded-2xl p-10 text-white/90 relative overflow-hidden">
+<div class="absolute -right-10 -bottom-10 opacity-5 scale-150">
+<span class="material-symbols-outlined text-[12rem]" data-icon="visibility">visibility</span>
+</div>
+<span class="material-symbols-outlined text-4xl mb-6 text-cyan-400 opacity-60" data-icon="format_quote">format_quote</span>
+<p class="serif-display text-2xl italic leading-relaxed relative z-10 font-light">
+                        "Vision is the bridge between the heart and the world. Our mission is to ensure that bridge remains clear for every patient we serve."
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Metrics -->
+<section class="mt-32 max-w-7xl mx-auto px-8">
+<div class="glass-card rounded-3xl p-12 md:py-16 grid grid-cols-2 md:grid-cols-4 gap-12 border-none">
+<div class="text-center group">
+<div class="serif-display text-4xl md:text-5xl text-slate-900 mb-2 transition-transform group-hover:-translate-y-1">50k+</div>
+<div class="text-[10px] uppercase text-cyan-700 font-bold tracking-widest opacity-60">Surgeries</div>
+</div>
+<div class="text-center group">
+<div class="serif-display text-4xl md:text-5xl text-slate-900 mb-2 transition-transform group-hover:-translate-y-1">25+</div>
+<div class="text-[10px] uppercase text-cyan-700 font-bold tracking-widest opacity-60">Years Trust</div>
+</div>
+<div class="text-center group">
+<div class="serif-display text-4xl md:text-5xl text-slate-900 mb-2 transition-transform group-hover:-translate-y-1">100%</div>
+<div class="text-[10px] uppercase text-cyan-700 font-bold tracking-widest opacity-60">Patient Care</div>
+</div>
+<div class="text-center group">
+<div class="serif-display text-4xl md:text-5xl text-slate-900 mb-2 transition-transform group-hover:-translate-y-1">NABH</div>
+<div class="text-[10px] uppercase text-cyan-700 font-bold tracking-widest opacity-60">Accredited</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component: COMPONENTS_10) -->
+<footer class="bg-slate-50 w-full py-12 px-8">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="font-serif text-lg font-semibold text-slate-800">
+                Abhilash Netra Vydyasala
+            </div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-slate-500 hover:text-cyan-600 transition-colors font-sans text-sm tracking-wide" href="#">Privacy Policy</a>
+<a class="text-slate-500 hover:text-cyan-600 transition-colors font-sans text-sm tracking-wide" href="#">Terms of Service</a>
+<a class="text-slate-500 hover:text-cyan-600 transition-colors font-sans text-sm tracking-wide" href="#">Patient Portal</a>
+<a class="text-slate-500 hover:text-cyan-600 transition-colors font-sans text-sm tracking-wide" href="#">Careers</a>
+</div>
+<div class="flex gap-4">
+<div class="h-8 w-8 rounded-full border border-slate-200 flex items-center justify-center text-slate-400 hover:text-cyan-600 transition-colors cursor-pointer opacity-100 hover:opacity-70">
+<span class="material-symbols-outlined text-sm" data-icon="call">call</span>
+</div>
+<div class="h-8 w-8 rounded-full border border-slate-200 flex items-center justify-center text-slate-400 hover:text-cyan-600 transition-colors cursor-pointer opacity-100 hover:opacity-70">
+<span class="material-symbols-outlined text-sm" data-icon="mail">mail</span>
+</div>
+</div>
+</div>
+<div class="mt-12 pt-8 border-t border-slate-200 text-center text-slate-500 font-sans text-sm tracking-wide">
+            © 2024 Abhilash Netra Vydyasala. Precision Ethereal Eye Care.
+        </div>
+</div>
+</footer>
+</body></html>

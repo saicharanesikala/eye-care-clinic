@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "primary": "#0f172a",
+                "accent-cyan": "#06b6d4",
+                "accent-blue": "#3b82f6",
+                "surface": "#f8fafc",
+                "surface-glass": "rgba(255, 255, 255, 0.7)",
+                "on-surface": "#0f172a",
+                "on-surface-variant": "#475569",
+                "outline-variant": "#e2e8f0"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.5rem",
+                "lg": "0.75rem",
+                "xl": "1rem",
+                "2xl": "1.5rem",
+                "full": "9999px"
+            },
+            "fontFamily": {
+                "headline": ["Newsreader", "serif"],
+                "body": ["Inter", "sans-serif"],
+                "label": ["Inter", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+      .font-serif { font-family: 'Newsreader', serif; }
+      .glass-panel {
+        background: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.4);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+      }
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .bg-mesh {
+        background-color: #f8fafc;
+        background-image: 
+            radial-gradient(at 0% 0%, hsla(199,100%,95%,1) 0, transparent 50%), 
+            radial-gradient(at 50% 0%, hsla(187,100%,92%,1) 0, transparent 50%), 
+            radial-gradient(at 100% 0%, hsla(220,100%,95%,1) 0, transparent 50%);
+      }
+    </style>
+</head>
+<body class="text-on-surface bg-mesh selection:bg-accent-cyan/30 selection:text-primary">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm border-b border-white/20 dark:border-slate-800/20">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-xl font-serif font-bold tracking-tighter text-slate-900 dark:text-slate-50">
+                Abhilash Netra Vydyasala
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-cyan-600 dark:text-cyan-400 font-semibold border-b-2 border-cyan-600 tracking-tight font-body text-sm" href="#">Home</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-cyan-600 transition-colors tracking-tight font-body text-sm" href="#">About</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-cyan-600 transition-colors tracking-tight font-body text-sm" href="#">Doctors</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-cyan-600 transition-colors tracking-tight font-body text-sm" href="#">Services</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-cyan-600 transition-colors tracking-tight font-body text-sm" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-6">
+<span class="hidden lg:block text-slate-700 font-medium text-sm">+91 9876543210</span>
+<button class="bg-slate-900 text-white px-6 py-2.5 rounded-full font-label text-sm font-bold scale-95 active:scale-90 transition-transform hover:shadow-lg hover:opacity-80">
+                    Book Appointment
+                </button>
+</div>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative px-8 py-20 lg:py-32 max-w-7xl mx-auto">
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+<div class="z-10">
+<span class="inline-block font-label text-[10px] font-bold tracking-[0.3em] uppercase text-accent-cyan mb-6 px-3 py-1 bg-accent-cyan/10 rounded-full">Established Excellence</span>
+<h1 class="font-serif text-6xl lg:text-8xl leading-none text-slate-900 mb-8 tracking-tight">
+                        Clear Vision, <br/><span class="italic text-accent-cyan">Brighter Life</span>
+</h1>
+<p class="text-on-surface-variant text-lg lg:text-xl max-w-xl mb-12 leading-relaxed font-body">
+                        Experience the heritage of surgical precision combined with modern ophthalmological advancements. We curate your journey to perfect sight.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-slate-900 text-white px-10 py-4 rounded-2xl font-label font-bold text-base transition-all hover:shadow-[0_20px_40px_rgba(15,23,42,0.15)] hover:-translate-y-1">
+                            Get In Touch
+                        </button>
+<button class="glass-panel text-slate-900 px-10 py-4 rounded-2xl font-label font-bold text-base transition-all hover:bg-white/40">
+                            Learn More
+                        </button>
+</div>
+<!-- Trust Badges -->
+<div class="mt-16 pt-8 border-t border-slate-200/50 flex flex-wrap gap-8 items-center opacity-80">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-accent-cyan" data-icon="verified_user">verified_user</span>
+<span class="font-label text-[10px] font-bold tracking-widest uppercase text-slate-500">NABH Accredited</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-accent-cyan" data-icon="security">security</span>
+<span class="font-label text-[10px] font-bold tracking-widest uppercase text-slate-500">ISO 9001:2015</span>
+</div>
+</div>
+</div>
+<div class="relative">
+<!-- Glass Orbs for aesthetic background -->
+<div class="absolute -top-20 -right-20 w-96 h-96 bg-cyan-200/40 rounded-full blur-[100px]"></div>
+<div class="absolute -bottom-20 -left-20 w-80 h-80 bg-blue-200/30 rounded-full blur-[80px]"></div>
+<div class="relative rounded-3xl overflow-hidden shadow-2xl transition-transform duration-700 hover:scale-[1.01]">
+<img alt="Professional Ophthalmologist" class="w-full aspect-[4/5] object-cover" data-alt="Dignified male ophthalmologist in a professional white coat, warm lighting, smiling kindly in a modern clean medical office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_HxVE_Xe-PL2LHmSwZnCa6G9CzBpJ0TOpy_mZl75SRRT7xOgdTZknPSWU_hE50DTu_jO2PXzJodfiGyGprQ7RzXaqCcM_CWdbrM4wNWnOlN5LOl20tPCWZM0nuXfhxkQN_PmXbY73T4HMBjy-uqJOYWvKvg7gG9EnBimWlGJ3vSPYB6Ga2j7Ox-7S8-bXfb0sXmyZBSDgZ3OagKI0rm8KVgYA4bWLw3sY2KKpzEyGR7lTITosnWfeWObv0x_PnABv-AKDQvhXwXE"/>
+<!-- Floating Glass Info Box -->
+<div class="absolute bottom-8 left-8 right-8 glass-panel p-8 rounded-2xl shadow-2xl border border-white/40">
+<div class="flex items-start gap-4">
+<div class="bg-accent-cyan/20 p-3 rounded-xl">
+<span class="material-symbols-outlined text-accent-cyan" data-icon="medical_services">medical_services</span>
+</div>
+<div>
+<h4 class="font-serif text-2xl text-slate-900 font-bold">Expert Eye Care</h4>
+<p class="text-sm text-slate-600 mt-2 leading-snug font-body">Led by senior specialists with over 25 years of surgical excellence.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats / Bento Highlights -->
+<section class="py-24 relative overflow-hidden">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid md:grid-cols-3 gap-8">
+<div class="glass-card p-10 rounded-3xl shadow-sm border border-white/50 group hover:border-accent-cyan/30 transition-all duration-500">
+<div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-sm mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl text-accent-cyan" data-icon="visibility">visibility</span>
+</div>
+<h3 class="font-serif text-2xl text-slate-900 mb-4">Precision Diagnostics</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed font-body">Advanced imaging technology for early detection and accurate treatment planning for all eye conditions.</p>
+</div>
+<div class="bg-slate-900 p-10 rounded-3xl shadow-2xl relative overflow-hidden group">
+<div class="absolute -top-10 -right-10 w-40 h-40 bg-accent-cyan/20 rounded-full blur-3xl group-hover:bg-accent-cyan/40 transition-colors"></div>
+<div class="relative z-10">
+<h3 class="font-serif text-2xl text-white mb-4">Patient-First Philosophy</h3>
+<p class="text-slate-300 text-sm leading-relaxed font-body">Every treatment plan is curated specifically for your lifestyle and visual requirements.</p>
+<button class="mt-8 text-accent-cyan font-bold text-sm flex items-center gap-2 group-hover:gap-4 transition-all">
+                                View Our Approach <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="glass-card p-10 rounded-3xl shadow-sm border border-white/50 group hover:border-accent-cyan/30 transition-all duration-500">
+<div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-sm mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl text-accent-cyan" data-icon="biotech">biotech</span>
+</div>
+<h3 class="font-serif text-2xl text-slate-900 mb-4">Modern Microsurgery</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed font-body">State-of-the-art operation theaters equipped for minimally invasive laser and cataract surgeries.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Doctor Profile Section -->
+<section class="py-32 px-8 max-w-7xl mx-auto">
+<div class="grid lg:grid-cols-12 gap-16 items-center">
+<div class="lg:col-span-5 order-2 lg:order-1">
+<h2 class="font-serif text-5xl text-slate-900 mb-8 tracking-tight">Our Principal <br/><span class="italic text-accent-cyan">Consultant</span></h2>
+<p class="text-xl text-slate-600 mb-10 leading-relaxed font-serif italic">
+                        "Visual health is the gateway to a better quality of life. At Abhilash Netra Vydyasala, we treat every eye with the precision it deserves and the warmth you expect."
+                    </p>
+<div class="space-y-6">
+<div class="flex items-center gap-4 group">
+<div class="w-10 h-10 rounded-full bg-accent-cyan/10 flex items-center justify-center group-hover:bg-accent-cyan/20 transition-colors">
+<span class="material-symbols-outlined text-accent-cyan text-xl" data-icon="school">school</span>
+</div>
+<span class="text-slate-700 font-medium font-body">MS (Ophthalmology), Fellow in Vitreo-Retina</span>
+</div>
+<div class="flex items-center gap-4 group">
+<div class="w-10 h-10 rounded-full bg-accent-cyan/10 flex items-center justify-center group-hover:bg-accent-cyan/20 transition-colors">
+<span class="material-symbols-outlined text-accent-cyan text-xl" data-icon="star">star</span>
+</div>
+<span class="text-slate-700 font-medium font-body">25+ Years of Surgical Expertise</span>
+</div>
+</div>
+<button class="mt-14 group flex items-center gap-4 text-slate-900 font-bold uppercase tracking-[0.2em] text-[10px]">
+                        Learn about our team
+                        <span class="w-12 h-[2px] bg-accent-cyan group-hover:w-20 transition-all duration-500"></span>
+</button>
+</div>
+<div class="lg:col-span-7 order-1 lg:order-2">
+<div class="relative group">
+<!-- Decorative Glass Background -->
+<div class="absolute inset-4 bg-slate-900/5 rounded-[2rem] -rotate-2 group-hover:rotate-0 transition-transform duration-700"></div>
+<div class="relative w-full aspect-[16/10] rounded-[2rem] overflow-hidden shadow-2xl">
+<img alt="Hospital Interior" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Wide angle shot of a clean, modern, high-end eye clinic lobby with warm wooden accents and soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpYgIseKonhiLKOt0hPHELN-X_oFxZjNy60JJVBfaOjzbwFPilUgsIuxmfPsbPP3nKizcsbZ-5hHDETxHhxERREjS7fNDVEfitQ66XRGi4fwTYAlAEybwNLZb0_oNLHTHyJzX-pkLWduZMZv07ddQeTU4eWDqaHBTAkqoP556yws_h7BzGRRWtvHGYZBq2pkjYwD_hoJOjjtZdO_hQSKieaQSmNqs1-UEG4ZJDsPTWT63UuvDDx0DG_I9qQykSqoR0pfL_daMdhRY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-950 border-t border-slate-200/50">
+<div class="max-w-7xl mx-auto px-8 py-16">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-12 mb-12">
+<div>
+<h3 class="font-serif text-2xl font-bold text-slate-800 dark:text-slate-200 mb-4">Abhilash Netra Vydyasala</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed max-w-sm font-body">
+                        Pioneering eye care with heritage and technology. Committed to restoring vision and enhancing lives through clinical excellence.
+                    </p>
+</div>
+<div class="flex flex-col gap-6">
+<h4 class="font-label text-[10px] font-bold uppercase tracking-widest text-slate-400">Quick Links</h4>
+<div class="flex gap-8">
+<a class="text-slate-500 dark:text-slate-500 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors font-sans text-sm tracking-wide" href="#">Privacy Policy</a>
+<a class="text-slate-500 dark:text-slate-500 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors font-sans text-sm tracking-wide" href="#">Terms of Service</a>
+<a class="text-slate-500 dark:text-slate-500 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors font-sans text-sm tracking-wide" href="#">Patient Portal</a>
+</div>
+</div>
+</div>
+<div class="pt-12 border-t border-slate-200/50 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-slate-500 dark:text-slate-500 font-sans text-xs tracking-wide">
+                    © 2024 Abhilash Netra Vydyasala. Precision Ethereal Eye Care.
+                </p>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-slate-400 hover:text-accent-cyan cursor-pointer transition-colors" data-icon="facebook">public</span>
+<span class="material-symbols-outlined text-slate-400 hover:text-accent-cyan cursor-pointer transition-colors" data-icon="camera">photo_camera</span>
+<span class="material-symbols-outlined text-slate-400 hover:text-accent-cyan cursor-pointer transition-colors" data-icon="share">share</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
